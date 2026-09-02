@@ -10,7 +10,7 @@ interface MainLayoutProps {
 
 // Define your sidebar navigation items
 const navItems = [
-    { name: "Dashboard", path: "/", icon: <MdDashboard size={20}/> },
+    { name: "Dashboard", path: "/dashboard", icon: <MdDashboard size={20}/> },
     { name: "Analytics", path: "/analytics", icon: <IoAnalytics size={20}/> },
     { name: "Settings", path: "/settings", icon:  <IoSettings size={20}/>},
 ];
