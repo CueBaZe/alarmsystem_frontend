@@ -21,7 +21,8 @@ export default function Dashboard() {
           </div>
 
           <div className="col-span-4 flex flex-row items-center justify-center bg-[#faf9f7] h-[600px] rounded-lg border-2 border-[#ebe8e1] mt-12">
-            <div onClick={handlePower} className={`flex p-4 items-center justify-center w-[90%] h-[90%] rounded-2xl ${power ? 'bg-green-500' : 'bg-red-500'}`}>
+            <div onClick={handlePower} className={`flex p-4 items-center transtion duration-300 justify-center w-[90%] h-[90%] rounded-2xl 
+              ${power ? 'bg-green-500 hover:bg-green-400' : 'bg-red-500 hover:bg-red-400'}`}>
               <FaPowerOff size={250} color="#fff"/>
             </div>
           </div>
