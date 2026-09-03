@@ -1,10 +1,19 @@
 import MainLayout from "../mainlayout";
 import { FaPowerOff } from "react-icons/fa";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Dashboard() {
 
   const [power, setPower] = useState(true);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem('userToken')) {
+      navigate('/');
+    }
+  }, [])
 
   const handlePower = () => {
     setPower(prev => !prev);
