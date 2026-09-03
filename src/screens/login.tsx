@@ -1,6 +1,6 @@
 import logo from '../assets/firewall.png'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
