@@ -1,7 +1,8 @@
 import logo from '../assets/firewall.png'
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { VscDebugBreakpointUnsupported } from 'react-icons/vsc';
 
 
 export default function Login() {
@@ -17,6 +18,12 @@ export default function Login() {
     const navigate = useNavigate();
 
     const API_URL = import.meta.env.VITE_API_URL;
+
+    useEffect(() => {
+        if (localStorage.getItem('userToken')) {
+            navigate('/dashboard');
+        }
+    }, []);
 
     const handleLogin = async (name: string, password: string) => { //login function
 
